@@ -31,3 +31,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - name: Xcodebuild Action
+        run: |
+          cd Example/
+          ls
+          xcodebuild clean
+          pod install
+          xcodebuild build
