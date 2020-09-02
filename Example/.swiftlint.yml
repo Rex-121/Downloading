@@ -1,0 +1,15 @@
+disabled_rules:
+  - line_length
+  - type_name
+
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - extension_access_modifier
+
+excluded:
+  - Pods
+  - Tests
+
+function_body_length:
+  warning: 50

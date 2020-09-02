@@ -1,7 +1,11 @@
 use_frameworks!
 
 target 'Downloading_Example' do
+  
+  
   pod 'Downloading', :path => '../'
+  
+  pod 'SwiftLint'
 
   target 'Downloading_Tests' do
     inherit! :search_paths

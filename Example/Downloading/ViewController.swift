@@ -8,17 +8,16 @@
 
 import UIKit
 
+import Downloading
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? "")
+
+        DownloadProvider().download(DownloadItem(from: "http://192.168.1.227:81/xxupload/splash.jpg", to: .caches("ccc"))).resume()
     }
 
 }
-
