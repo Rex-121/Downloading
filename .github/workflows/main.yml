@@ -34,5 +34,6 @@ jobs:
           
       - name: Xcode build
         run: |
+          cd Example/
           xcodebuild test -enableCodeCoverage YES -workspace Downloading.xcworkspace -scheme Downloading-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
