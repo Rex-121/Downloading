@@ -15,9 +15,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? "")
+        print(NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first ?? "")
 
-        DownloadProvider().download(DownloadItem(from: "http://192.168.1.227:81/xxupload/splash.jpg", to: .caches("ccc"))).resume()
+        do {
+            let task = try DownloadTask(DownloadItem(from: "http://192.168.1.227:81/xxupload/PPTS.zip", to: .caches()))
+            
+            task.progress { (progress) in
+                print(progress.progress)
+            }
+            
+            task.resume()
+        } catch {
+            print(error)
+        }
+        
     }
 
 }
