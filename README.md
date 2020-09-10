@@ -1,9 +1,7 @@
 # Downloading
 
-[![CI Status](https://img.shields.io/travis/Tyrant/Downloading.svg?style=flat)](https://travis-ci.org/Tyrant/Downloading)
-[![Version](https://img.shields.io/cocoapods/v/Downloading.svg?style=flat)](https://cocoapods.org/pods/Downloading)
-[![License](https://img.shields.io/cocoapods/l/Downloading.svg?style=flat)](https://cocoapods.org/pods/Downloading)
-[![Platform](https://img.shields.io/cocoapods/p/Downloading.svg?style=flat)](https://cocoapods.org/pods/Downloading)
+[![CI Status](https://github.com/Rex-121/Downloading/workflows/CI/badge.svg?branch=master)](https://travis-ci.org/Tyrant/Downloading)
+[![codecov](https://codecov.io/gh/Rex-121/Downloading/branch/master/graph/badge.svg)](https://codecov.io/gh/Rex-121/Downloading)
 
 ## Example
 

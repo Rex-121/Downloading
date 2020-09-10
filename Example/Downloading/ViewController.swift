@@ -21,6 +21,11 @@ class ViewController: UIViewController {
             let task = try DownloadTask(DownloadItem(from: "http://192.168.1.227:81/xxupload/PPTS.zip", to: .caches()))
             
             task.progress { (progress) in
+                
+                if progress.fractionCompleted > 0.5 {
+                    print("stop")
+                    task.cancel()
+                }
                 print(progress.progress)
             }
             

@@ -12,7 +12,7 @@ public typealias DownloadResponse<Value> = Alamofire.DownloadResponse<Value>
 public protocol DownloadingProtocol {
     
     /// 取消
-    func cancel()
+    func cancel(createResumeData: Bool)
     
     /// 恢复/启动
     func resume()
@@ -47,8 +47,9 @@ public struct DownloadItem {
 }
 
 open class DownloadTask: DownloadingProtocol {
-    public func cancel() {
-        task.cancel()
+    public func cancel(createResumeData: Bool = true) {
+        task.cancel(createResumeData: createResumeData)
+//        print(task.resumeData)
     }
     
     public func resume() {
@@ -75,7 +76,7 @@ open class DownloadTask: DownloadingProtocol {
                 return (destinationPath, [.createIntermediateDirectories])
             }
         })
-        
+                
     }
         
     open func progress(queue: DispatchQueue = DispatchQueue.main, closure: @escaping (Progress) -> Void) {
