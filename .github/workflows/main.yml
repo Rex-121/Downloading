@@ -36,6 +36,7 @@ jobs:
         run: |
           cd Example/
           xcodebuild test -enableCodeCoverage YES -workspace Downloading.xcworkspace -scheme Downloading-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+          - bash <(curl -s https://codecov.io/bash) -t 2cc44d65-ded0-4fb5-9b42-03fedb0398b8 -J 'Downloading'
     
       - name: Xcode Build
         run: |
